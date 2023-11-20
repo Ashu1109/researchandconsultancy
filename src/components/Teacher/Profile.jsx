@@ -1,92 +1,54 @@
-import React from 'react'
-import Navbar from '../Navbar/Navbar'
-import ashoksir from '../../assets/AshokSir.png'
-import Footer from '../Footer/Footer'
-import { AiFillPhone, AiOutlineMail, AiOutlineProfile, AiFillGolden, AiFillCaretRight } from 'react-icons/ai'
+import React from "react";
+import { Link } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 
+import pht from "../../assets/AshokSir.png";
 const Profile = () => {
-  return (<>
-  <Navbar/>
-    <div className="teacher">
-      <div className='profile'>
-
-        <div className='pht'>
-          <img src={ashoksir} alt="Ashok sir" />
-        </div>
-        <div className='info'>
-          <h2>ASHOK KUMAR MONDAL</h2>
-          <p>Assistant Professor</p>
-          <h3>Mechanical Engineering</h3>
-          <p> <AiFillPhone />91+6206676494</p>
-          <a href="/"><AiOutlineMail /> lavkushraj1155@gmail.com</a>
-        </div>
-        <div className='ppt'>
-          <a href="/"><AiFillGolden /> Achievements</a>
-          <a href="/"><AiOutlineProfile />Biodata</a>
-
-        </div>
-      </div>
-      <div className='Areas'>
-
-        <h2>Responsibilities</h2>
-        <div>
-          <p><AiFillCaretRight />jdhvbwue feyjflvdjhs lfhvjlshvl</p>
-          <p><AiFillCaretRight />dvkshfl h lgj</p>
-        </div>
-
-
-
-        <h2>Research Areas</h2>
-        <div>
-          <p><AiFillCaretRight />kkfjgb f kb</p>
-          <p><AiFillCaretRight />fvndkvfigkbfgb</p>
-        </div>
-
-
-      </div>
-
-
-
-      <div className='sections'>
-        <div class="dropdown">
-          <button class="dropbtn">Research section
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-
+  return (
+    <>
+      <Navbar />
+      <div className="page">
+        <div className="researchContainer">
+          <div className="title">Research Areas</div>
+          <div className="researchsection">
+            <Link>Robotics</Link>
+            <Link>Energy</Link>
+            <Link>Material Scince</Link>
+            <Link>Biological science</Link>
+            <Link>Engineering</Link>
+            <Link>Chemistry</Link>
+            <Link>Psycology</Link>
+            <Link>Artificial Inteligence</Link>
+            <Link>Computer Science</Link>
+            <Link>Micro biology</Link>
+            <Link>Data science</Link>
+            <Link>Earth science</Link>
+            <Link>Technology</Link>
+            <Link>Microbiology</Link>
           </div>
         </div>
-        <div class="dropdown">
-          <button class="dropbtn">Publications
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="#">Current publications</a>
-            <a href="#">Published Books</a>
-
-          </div>
+        <div className="teacherprofile">
+          <Link to={"/Biodata"} className="link">
+            <div className="faculties">
+              <div className="card">
+                <div className="image">
+                  <img src={pht} alt="ashoksir" />
+                  <h2>ASHOK KUMAR MONDAL</h2>
+                </div>
+                <div className="content">
+                  <h2>ASHOK KUMAR MONDAL</h2>
+                  <p>Assistant Professor</p>
+                  <h3>Mechanical Engineering</h3>
+                </div>
+              </div>
+            </div>
+          </Link>
         </div>
-        <div class="dropdown">
-          <button class="dropbtn">Projects
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="#">Current projects</a>
-            <a href="#">Completed projects</a>
-
-          </div>
-        </div>
-
       </div>
-
-
-    </div  >
-    <Footer/>
-
-  </>
+      <Footer />
+    </>
   );
-}
+};
 
-export default Profile
+export default Profile;
