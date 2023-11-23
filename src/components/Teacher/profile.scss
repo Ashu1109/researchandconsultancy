@@ -23,11 +23,11 @@
     }
     .researchsection {
       width: 20rem;
-      height: 25rem;
+      height: 100%;
       border: 2px solid #000;
       border-radius: 10px;
-      margin-top: 1rem;
-      padding: 22rem 0 4rem 2rem;
+      // margin-top: 1rem;
+      // padding: 22rem 0 4rem 2rem;
       display: flex;
       justify-content: center;
       flex-direction: column;
@@ -46,9 +46,22 @@
   }
 
   .teacherprofile {
-    width: 70rem;
-    height: 70rem;
-    .link {
+    width:100%;
+    height: 100vh;
+    display: flex;
+
+    .topic{
+      width: 70rem;
+      height: 3rem;
+      display: flex;
+      justify-content: center;
+      background-color: burlywood;
+      align-items: center;
+      border-radius: 1rem;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+    >a {
       width: 17rem;
       height: 17rem;
       .faculties {

@@ -2,8 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
-
-import pht from "../../assets/AshokSir.png";
+import "./biodata.scss";
+import "./profile.scss";
+import Card from "./Card";
+import teacherData from '../../Data/TeacherData.json'
 const Profile = () => {
   return (
     <>
@@ -27,25 +29,14 @@ const Profile = () => {
             <Link>Technology</Link>
             <Link>Microbiology</Link>
           </div>
-        </div>
-        <div className="teacherprofile">
-          <Link to={"/Biodata"} className="link">
-            <div className="faculties">
-              <div className="card">
-                <div className="image">
-                  <img src={pht} alt="ashoksir" />
-                  <h2>ASHOK KUMAR MONDAL</h2>
-                </div>
-                <div className="content">
-                  <h2>ASHOK KUMAR MONDAL</h2>
-                  <p>Assistant Professor</p>
-                  <h3>Mechanical Engineering</h3>
-                </div>
-              </div>
-            </div>
-          </Link>
-        </div>
-      </div>
+          </div>
+          <div className="teacherprofile">
+          <div className="topic">All Researchers</div>
+          {
+            teacherData.Teacherdata.map((teacherData) =>(<Card/>))
+          }
+          </div>
+          </div>
       <Footer />
     </>
   );
