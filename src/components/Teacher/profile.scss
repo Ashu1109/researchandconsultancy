@@ -1,174 +1,163 @@
+.page {
+  width: 100vw;
+  height: 100vh;
+  margin: 55rem 0 20rem 0;
+  display: flex;
 
-
-.teacher {
-    width: 100vw;
-    height: 100%;
+  .researchContainer {
+    width: 25rem;
+    height: 60rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    margin-top: 25rem;
-    padding: 25rem 0 25rem 0;
-    
-    .profile {
-        width: 80%;
-        height: 20rem;
-        background-color: rgb(208, 210, 212);
+    .title {
+      width: 20rem;
+      height: 3rem;
+      background: aqua;
+      padding: 2rem;
+      border-radius: 1rem;
+      font-size: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .researchsection {
+      width: 20rem;
+      height: 100%;
+      border: 2px solid #000;
+      border-radius: 10px;
+      // margin-top: 1rem;
+      // padding: 22rem 0 4rem 2rem;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      // background-position-y: top;
+      // animation: move 5s infinite;
+      overflow-y: scroll;
+      scroll-behavior: smooth;
+
+      > a {
+        width: 20rem;
+        height: 3rem;
+        padding: 1rem;
+      }
+    }
+  }
+
+  .teacherprofile {
+    width:100%;
+    height: 100vh;
+    display: flex;
+
+    .topic{
+      width: 70rem;
+      height: 3rem;
+      display: flex;
+      justify-content: center;
+      background-color: burlywood;
+      align-items: center;
+      border-radius: 1rem;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+    >a {
+      width: 17rem;
+      height: 17rem;
+      .faculties {
+        width: 17rem;
+        height: 17rem;
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        padding: 4rem;
-        justify-content: space-between;
-        border-radius: 10px;
-        box-shadow: 0 0 20px rgb(67, 74, 81);
+        // padding: 5rem;
 
-        >.pht {
-            width: 10rem;
-            height: 12rem;
-            border: 2px solid rgb(48, 47, 47);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            justify-content: space-around;
-            border-radius: 5px;
-            box-shadow: 0 0 10px black;
+        > .card {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background-color: aquamarine;
+          width: 250px;
+          height: 200px;
+          border-radius: 10px;
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          cursor: pointer;
+          padding: 30px 50px;
+          background-color: #f8dede;
+          transition: 1s;
 
-            >img {
-                width: 8rem;
-                height: 10rem;
-                box-shadow: 0 0 30px black;
-                &:hover{
-                    transform: scale(1.3);
-                }
-            }
+          &:hover {
+            height: 250px;
+          }
+          &:hover > .image > h2 {
+            opacity: 0;
+          }
 
-        }
+          &:hover > .content {
+            opacity: 1;
+            transform: translateY(-40px);
+          }
 
-        >.info {
-            width: 50%;
-            height: 10rem;
-
+          > .image {
+            position: relative;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            justify-content: space-between;
-        }
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            transform: translateY(-10px);
+            > h2 {
+              margin: 1rem 0 0 2rem;
+              width: 15rem;
+              display: flex;
+              padding: 10px;
+            }
 
-        >.ppt {
+            > img {
+              border-radius: 10px;
+              box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+            }
+          }
+
+          .content {
+            position: relative;
             width: 15rem;
+            height: 50px;
+
             display: flex;
-          flex-direction: column;
             justify-content: center;
-            justify-content: space-between;
+            align-items: center;
 
-            >a {
-                margin: 2px;
-                display: flex;
-                justify-content:flex-start;
-                align-items: center;
+            flex-direction: column;
+            transform: translateY(-200px);
+            opacity: 0;
+            transition: 1s;
+            // >h2{
+            //     display: flex;
+            //     padding:5px 10px;
+            // }
+            // >h3{
 
-            }
+            //         display: flex;
+            //         padding: 5px 10px;
+
+            // }
+            // >p{
+            //     display: flex;
+            //     padding: 5px 10px;
+
+            // }
+          }
         }
-
+      }
     }
-
-    .Areas {
-        width: 90%;
-        height: 20rem;
-        margin-top: 5rem;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        >h2 {
-           
-            padding: 10px;
-            border-radius: 8px;
-
-            background-color: aquamarine;
-        }
-
-        >div {
-            width: 80%;
-            height: 20rem;
-            display: flex;
-            padding: 15px;
-            
-            flex-wrap: wrap;
-            >p{
-                margin-left: 2rem;
-            }
-        }
-    }
-
-    .sections {
-        width: 90%;
-        height: 3rem;
-        margin-top: 2rem;
-       
-        border-radius: 8px;
-        display: flex;
-
-
-
-       
-    }
-        .dropdown {
-            float:left;
-           
-            overflow: hidden;
-            background-color: aquamarine;
-          }
-          
-          .dropdown .dropbtn {
-            font-size: 17px;    
-            border: none;
-            outline: none;
-            color: rgb(16, 15, 15);
-            padding: 14px 16px;
-            background-color: inherit;
-            font-family: inherit;
-            margin: 0;
-          }
-          
-          .dropdown-content {
-            display: none;
-            position: absolute;
-            border-radius: 2px;
-            background-color: rgb(32, 226, 194);
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-          }
-          
-          .dropdown-content a {
-            float: none;
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-          }
-          
-          .topnav a:hover, .dropdown:hover .dropbtn {
-           
-            border-radius: 7px;
-            background-color: rgb(108, 166, 166);
-            color: rgb(13, 13, 13);
-          }
-          
-          .dropdown-content a:hover {
-            margin: 0.5rem;
-            border-radius: 8px;
-            background-color: #ace4e9;
-            color: black;
-          }
-          
-          .dropdown:hover .dropdown-content {
-            display: block;
-          }
-          
-    
-    
+  }
+}
+@keyframes move {
+  100% {
+    background-position-y: center;
+  }
 }
